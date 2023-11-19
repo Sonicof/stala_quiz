@@ -8,7 +8,7 @@ Welcome to the Stala Quiz application, a simple quiz program built with Python a
 - Quiz functionality with multiple-choice questions
 - Email notification with the final quiz score
 - Connection to a Microsoft SQL Server database using pypyodbc
-- 
+
 ## Rules
 
 - There will be 4 options to every question marked A, B, C and D
