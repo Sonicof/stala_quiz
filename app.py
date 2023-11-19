@@ -12,7 +12,7 @@ class StalaQuizApp:
         self.root.title("Stala Quiz")
         self.root.geometry("600x400")
 
-        self.style = Style(theme="minty")  # Change the theme as needed
+        self.style = Style(theme="minty")  
 
         self.username_label = ttk.Label(root, text="Username:")
         self.username_label.pack(pady=5)
