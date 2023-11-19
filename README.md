@@ -51,4 +51,8 @@ If you would like to contribute to this project, please follow these steps:
 - Create a new branch for your feature or bug fix.
 - Make your changes and submit a pull request.
 
+## Link to the .exe file
+
+https://drive.google.com/file/d/1309YHGyrCZm7DuMFyktRdoIIWCC6cVdr/view?usp=drive_link
+
 ## Thank You For Visitng
