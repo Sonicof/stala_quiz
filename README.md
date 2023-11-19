@@ -11,11 +11,11 @@ Welcome to the Stala Quiz application, a simple quiz program built with Python a
 - 
 ## Rules
 
-1.There will be 4 options to every question marked A, B, C and D
-2.In order to answer just click on the option 
-3.Every correct answer will give you 10 points and every wrong answer will deduct 5 points
-4.If you wish to stop at any moment you can click exit 
-5.Your score at the end will be sent to your email if you wish
+- There will be 4 options to every question marked A, B, C and D
+- In order to answer just click on the option 
+- Every correct answer will give you 10 points and every wrong answer will deduct 5 points
+- If you wish to stop at any moment you can click exit 
+- Your score at the end will be sent to your email if you wish
 
 ## Requirements
 
@@ -38,17 +38,17 @@ pip install -r requirements.txt
 
 ## Usage
 
-1.Run the application using the command mentioned above.
-2.Log in or sign up to start the quiz.
-3.Answer the quiz questions and receive your final score.
-4.Optionally, choose to receive an email with your final score.
+- Run the application using the command mentioned above.
+- Log in or sign up to start the quiz.
+- Answer the quiz questions and receive your final score.
+- Optionally, choose to receive an email with your final score.
 
 ## Contributing
 
 If you would like to contribute to this project, please follow these steps:
 
-1.Fork the repository.
-2.Create a new branch for your feature or bug fix.
-3.Make your changes and submit a pull request.
+- Fork the repository.
+- Create a new branch for your feature or bug fix.
+- Make your changes and submit a pull request.
 
 ## Thank You For Visitng
