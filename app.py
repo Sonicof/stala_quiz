@@ -98,7 +98,8 @@ class StalaQuizApp:
                         messagebox.showerror("Signup Error",
                                              "An error occurred during account creation. Please try again.")
             except Exception as e:
-                print(f"Error in signup: {e}")
+                messagebox.showerror("Signup Error",
+                                     "An error occurred during account creation. Please try again.")
 
     def check_credentials(self, username, password):
         try:
@@ -110,7 +111,7 @@ class StalaQuizApp:
             data = self.cursor.fetchone()
             return data is not None
         except Exception as e:
-            print(f"Error checking credentials: {e}")
+            #print(f"Error checking credentials: {e}")
             return False
 
     def check_username_existence(self, username):
@@ -121,7 +122,7 @@ class StalaQuizApp:
             data = self.cursor.fetchone()
             return data is not None
         except Exception as e:
-            print(f"Error checking username existence: {e}")
+            #print(f"Error checking username existence: {e}")
             return False
 
     def create_account(self, username, password, email):
@@ -133,11 +134,11 @@ class StalaQuizApp:
             query = "INSERT INTO player (usrname, passwd, email, datee, score, played) VALUES (?, ?, ?, ?, 0, 0)"
             self.cursor.execute(query, (username, hashed_password, email, datetime.now().strftime("%d-%m-%Y")))
             self.mycon.commit()
-            print("Account created successfully.")
+            #print("Account created successfully.")
             self.mycon.close()
             return True
         except Exception as e:
-            print(f"Error creating account: {e}")
+            #print(f"Error creating account: {e}")
             return False
 
     def start_quiz(self, username):
@@ -181,7 +182,7 @@ class StalaQuizApp:
             else:
                 return 0, 0
         except Exception as e:
-            print(f"Error fetching user score and played count: {e}")
+            #print(f"Error fetching user score and played count: {e}")
             return 0, 0
 
     def fetch_played_question_count(self, username):
@@ -195,7 +196,7 @@ class StalaQuizApp:
             else:
                 return 0
         except Exception as e:
-            print(f"Error fetching played question count: {e}")
+            #print(f"Error fetching played question count: {e}")
             return 0
 
     def fetch_questions_from_database(self):
@@ -204,7 +205,7 @@ class StalaQuizApp:
             self.cursor.execute(st)
             return self.cursor.fetchall()
         except Exception as e:
-            print(f"Error fetching questions: {e}")
+            #print(f"Error fetching questions: {e}")
             messagebox.showerror("Error", "An error occurred while fetching questions.")
             return []
 
@@ -223,10 +224,10 @@ class StalaQuizApp:
             else:
                 self.end_quiz()
         except Exception as e:
-            print(f"Error loading question: {e}")
+            #print(f"Error loading question: {e}")
             messagebox.showerror("Error", "An error occurred while loading the question.")
 
-        print("Loaded question:", data)  # Add this line to see the loaded question data
+        #print("Loaded question:", data)  # Add this line to see the loaded question data
 
     def end_quiz(self):
         try:
@@ -246,7 +247,7 @@ class StalaQuizApp:
 
             self.root.deiconify()
         except Exception as e:
-            print(f"Error ending quiz: {e}")
+            #print(f"Error ending quiz: {e}")
             messagebox.showerror("Error", "An error occurred while ending the quiz.")
 
     def send_email(self, username):
@@ -275,13 +276,13 @@ class StalaQuizApp:
                 )
                 yag.close()
 
-                print("Score has been Emailed to the respective player.")
+                #print("Score has been Emailed to the respective player.")
 
                 messagebox.showinfo("Email Sent", "The final score has been emailed to you.")
             else:
-                print("Unable to fetch player data for email.")
+                messagebox.showinfo("Email Not Sent", "Unable to fetch player email.")
         except Exception as e:
-            print(f"Error sending email: {e}")
+            #print(f"Error sending email: {e}")
             messagebox.showerror("Error", "An error occurred while sending the email.")
 
     def answer_question(self, option):
@@ -300,7 +301,7 @@ class StalaQuizApp:
             self.quiz_score_label.config(text=f"Score: {self.score}, Played: {self.played}")
 
         except Exception as e:
-            print(f"Error answering question: {e}")
+            #print(f"Error answering question: {e}")
             messagebox.showerror("Error", "An error occurred while answering the question.")
 
         self.played += 1
