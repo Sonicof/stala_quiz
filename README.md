@@ -35,7 +35,8 @@ Welcome to the Stala Quiz application, a simple quiz program built with Python a
 
 ## Install the required dependencies
 
-pip install -r requirements.txt
+Install the libraries listed above and the run add_question.py followed by app.py for local database
+
 
 ## Usage
 
