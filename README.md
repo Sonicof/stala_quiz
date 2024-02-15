@@ -7,7 +7,7 @@ Welcome to the Stala Quiz application, a simple quiz program built with Python a
 - User authentication and signup
 - Quiz functionality with multiple-choice questions
 - Email notification with the final quiz score
-- Connection to a Microsoft SQL Server database using pypyodbc
+- Connection to a Microsoft SQL Server database using pypyodbc(cloud) or the local server on your system depending on the code you use
 
 ## Rules
 
@@ -23,6 +23,7 @@ Welcome to the Stala Quiz application, a simple quiz program built with Python a
 - Tkinter (usually included with Python)
 - pypyodbc
 - yagmail
+- mysql.connector
 
 ## Installation
 
