@@ -104,7 +104,7 @@ class StalaQuizApp:
     def check_credentials(self, username, password):
         try:
             hashed_password = hashlib.md5(password.encode()).hexdigest()  # Hash the password before comparing
-            connection_string = 'Driver={ODBC Driver 18 for SQL Server};Server=tcp:staladatabase.database.windows.net,1433;Database=staladb;Uid=rootuserrohan;Pwd=ROHAN@jais12345;Encrypt=yes;TrustServerCertificate=no;Connection Timeout=30;'
+            connection_string = 'Driver={ODBC Driver 18 for SQL Server};Server=tcp:staladatabase.database.windows.net,1433;Database=staladb;Uid=rootuserrohan;Pwd=<classified>;Encrypt=yes;TrustServerCertificate=no;Connection Timeout=30;'
             self.mycon = odbc.connect(connection_string)
             self.cursor = self.mycon.cursor()
             self.cursor.execute("SELECT usrname, passwd FROM player WHERE usrname=? AND passwd=?", (username, hashed_password))
@@ -127,7 +127,7 @@ class StalaQuizApp:
 
     def create_account(self, username, password, email):
         try:
-            connection_string = 'Driver={ODBC Driver 18 for SQL Server};Server=tcp:staladatabase.database.windows.net,1433;Database=staladb;Uid=rootuserrohan;Pwd=ROHAN@jais12345;Encrypt=yes;TrustServerCertificate=no;Connection Timeout=30;'
+            connection_string = 'Driver={ODBC Driver 18 for SQL Server};Server=tcp:staladatabase.database.windows.net,1433;Database=staladb;Uid=rootuserrohan;Pwd=<classified>;Encrypt=yes;TrustServerCertificate=no;Connection Timeout=30;'
             self.mycon = odbc.connect(connection_string)
             self.cursor = self.mycon.cursor()
             hashed_password = hashlib.md5(password.encode()).hexdigest()  # Hash the password before storing
@@ -261,8 +261,8 @@ class StalaQuizApp:
                 email = data[0]
                 score = data[1]
 
-                sender_email = "testingport123@gmail.com"
-                sender_password = "vealeecorfomyaus"
+                sender_email = "<your_email>"
+                sender_password = "<your_password>"
 
                 receiver_email = email
                 subject = "Stala Quiz - Final Score"
